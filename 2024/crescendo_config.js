@@ -18,11 +18,16 @@ var config_data = `
       "defaultValue": "2023tnkn",
       "required": "true"
     },
-    { "name": "מספר קבוצה",
-      "code": "t",
-      "type": "team",
-      "min": 1,
-      "max": 99999
+    { "name": "לא לגעת",
+      "code": "l",
+      "type": "level",
+      "choices": {
+        "qm": "Quals<br>",
+        "sf": "Semifinals<br>",
+        "f": "Finals"
+      },
+      "defaultValue": "qm",
+      "required": "true"
     },
     { "name": "מספר מקצה",
       "code": "m",
@@ -44,16 +49,20 @@ var config_data = `
       },
       "required":"true"
     },
-   { "name": "מיקום התחלתי",
-      "code": "r",
-      "type": "robot",
-      "choices": {
-        "up": "למעלה",
-        "middle": "אמצע",
-        "down": "למטה",
-      },
-      "required":"true"
+    { "name": "מספר קבוצה",
+      "code": "t",
+      "type": "team",
+      "min": 1,
+      "max": 99999
     },
+    { "name": "Auto Start Position",
+      "code": "as",
+      "type": "clickable_image",
+      "filename": "2024/field_image.png",
+      "clickRestriction": "one",
+      "allowableResponses": "1 12 13 24 25 36 37 48 49 60 61 72",
+      "shape": "circle 5 black red true"
+    }
   ],
   "auton": [
     { "name": "Leave Starting Zone",
