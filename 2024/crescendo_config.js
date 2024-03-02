@@ -12,31 +12,26 @@ var config_data = `
       "maxSize": 20,
       "required": "true"
     },
-    { "name": "Event",
+    { "name": "מספר איבנט",
       "code": "e",
       "type": "event",
       "defaultValue": "2023tnkn",
       "required": "true"
     },
-    { "name": "Match Level",
-      "code": "l",
-      "type": "level",
-      "choices": {
-        "qm": "Quals<br>",
-        "sf": "Semifinals<br>",
-        "f": "Finals"
-      },
-      "defaultValue": "qm",
-      "required": "true"
+    { "name": "מספר קבוצה",
+      "code": "t",
+      "type": "team",
+      "min": 1,
+      "max": 99999
     },
-    { "name": "Match #",
+    { "name": "מספר מקצה",
       "code": "m",
       "type": "match",
       "min": 1,
       "max": 150,
       "required": "true"
     },
-    { "name": "Robot",
+    { "name": "רובוט",
       "code": "r",
       "type": "robot",
       "choices": {
@@ -49,20 +44,16 @@ var config_data = `
       },
       "required":"true"
     },
-    { "name": "Team #",
-      "code": "t",
-      "type": "team",
-      "min": 1,
-      "max": 99999
+   { "name": "מיקום התחלתי",
+      "code": "r",
+      "type": "robot",
+      "choices": {
+        "up": "למעלה",
+        "middle": "אמצע",
+        "down": "למטה",
+      },
+      "required":"true"
     },
-    { "name": "Auto Start Position",
-      "code": "as",
-      "type": "clickable_image",
-      "filename": "2024/field_image.png",
-      "clickRestriction": "one",
-      "allowableResponses": "1 12 13 24 25 36 37 48 49 60 61 72",
-      "shape": "circle 5 black red true"
-    }
   ],
   "auton": [
     { "name": "Leave Starting Zone",
