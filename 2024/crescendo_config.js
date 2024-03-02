@@ -5,11 +5,11 @@ var config_data = `
   "page_title": "Crescendo",
   "checkboxAs": "10",
   "prematch": [
-    { "name": "Scouter Initials",
+    { "name": "שם הסקאוטר",
       "code": "s",
       "type": "scouter",
-      "size": 5,
-      "maxSize": 5,
+      "size": 20,
+      "maxSize": 20,
       "required": "true"
     },
     { "name": "Event",
